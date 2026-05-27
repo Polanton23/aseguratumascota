@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de seguros para mascotas — AseguraTuMascota.es</title>
+<meta name="description" content="Calcula gratis el precio de un seguro para tu mascota en 60 segundos. Recomendaciones personalizadas según raza, edad y cobertura.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+<div class="ad-top">
+<div class="ad-container">
+<span class="ad-label">Publicidad</span>
+<div class="ad-placeholder ad-728">Espacio AdSense 728x90</div>
+</div>
+</div>
+
+<header class="site-header">
+<div class="container header-inner">
+<a href="/" class="logo">
+<span class="logo-mark">🐾</span>
+<span class="logo-text">Asegura<em>Tu</em>Mascota<span class="logo-tld">.es</span></span>
+</a>
+<nav class="main-nav">
+<a href="/seguros-perros">Perros</a>
+<a href="/seguros-gatos">Gatos</a>
+<a href="/seguros-exoticos">Exóticos</a>
+<a href="/comparativas">Comparativas</a>
+<a href="/blog">Blog</a>
+<a href="/calculadora" class="nav-cta">Calculadora</a>
+</nav>
+<button class="menu-toggle"><span></span><span></span><span></span></button>
+</div>
+</header>
+
+<section class="page-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="/">Inicio</a><span>›</span>Calculadora
+</div>
+<h1>Calculadora gratuita de seguros para mascotas</h1>
+<p>Responde 3 preguntas y te diremos cuánto deberías pagar y qué aseguradoras encajan mejor con tu mascota. Sin registros, sin email, sin spam.</p>
+</div>
+</section>
+
+<div class="calc-wrapper">
+<div class="calc-card">
+<div class="calc-progress">
+<span class="done"></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<!-- Step 1: Pet type -->
+<div class="calc-step active">
+<h2>1. ¿Qué tipo de mascota tienes?</h2>
+<p class="calc-sub">El precio varía mucho según la especie. Empezamos por ahí.</p>
+<div class="calc-options">
+<div class="calc-option" data-group="pet" data-value="dog">
+<span class="emoji">🐕</span>
+<strong>Perro</strong>
+<small>Cualquier raza</small>
+</div>
+<div class="calc-option" data-group="pet" data-value="cat">
+<span class="emoji">🐈</span>
+<strong>Gato</strong>
+<small>Cualquier raza</small>
+</div>
+<div class="calc-option" data-group="pet" data-value="exotic">
+<span class="emoji">🦎</span>
+<strong>Exótico</strong>
+<small>Hurón, reptil, ave…</small>
+</div>
+</div>
+<div class="calc-actions">
+<span></span>
+<button class="btn btn-primary" data-action="next" data-requires="pet">Siguiente →</button>
+</div>
+</div>
+
+<!-- Step 2: Age -->
+<div class="calc-step">
+<h2>2. ¿Qué edad tiene?</h2>
+<p class="calc-sub">La edad es uno de los factores con más peso en el precio final.</p>
+<div class="calc-options">
+<div class="calc-option" data-group="age" data-value="puppy">
+<span class="emoji">🍼</span>
+<strong>Cachorro</strong>
+<small>Menos de 1 año</small>
+</div>
+<div class="calc-option" data-group="age" data-value="adult">
+<span class="emoji">💪</span>
+<strong>Adulto</strong>
+<small>De 1 a 7 años</small>
+</div>
+<div class="calc-option" data-group="age" data-value="senior">
+<span class="emoji">👴</span>
+<strong>Senior</strong>
+<small>Más de 7 años</small>
+</div>
+</div>
+<div class="calc-actions">
+<button class="btn btn-ghost" data-action="back">← Atrás</button>
+<button class="btn btn-primary" data-action="next" data-requires="age">Siguiente →</button>
+</div>
+</div>
+
+<!-- Step 3: Coverage -->
+<div class="calc-step">
+<h2>3. ¿Qué cobertura necesitas?</h2>
+<p class="calc-sub">No todas las mascotas necesitan lo mismo. Sé sincero contigo mismo.</p>
+<div class="calc-options">
+<div class="calc-option" data-group="coverage" data-value="basic">
+<span class="emoji">📋</span>
+<strong>Básica</strong>
+<small>Responsabilidad civil + urgencias</small>
+</div>
+<div class="calc-option" data-group="coverage" data-value="standard">
+<span class="emoji">🛡️</span>
+<strong>Completa</strong>
+<small>Veterinario + cirugía + RC</small>
+</div>
+<div class="calc-option" data-group="coverage" data-value="premium">
+<span class="emoji">⭐</span>
+<strong>Premium</strong>
+<small>Todo + dental + preventiva</small>
+</div>
+</div>
+<div class="calc-actions">
+<button class="btn btn-ghost" data-action="back">← Atrás</button>
+<button class="btn btn-primary" data-action="next" data-requires="coverage">Ver resultado →</button>
+</div>
+</div>
+
+<!-- Step 4: Result -->
+<div class="calc-step">
+<div class="calc-result">
+<small style="color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; font-weight: 600;">Precio mensual estimado</small>
+<div class="big-price"><span>14</span><em>€/mes</em></div>
+<p style="margin-bottom: 8px;">Basado en el precio medio del mercado para tu perfil exacto.</p>
+
+<div class="recommended-list">
+<div class="rec-item">
+<div><strong>Petplan</strong><small>Premium con dental</small></div>
+<div class="rec-price">16€<small>/mes</small></div>
+</div>
+<div class="rec-item">
+<div><strong>Mapfre Mascotas</strong><small>Completa</small></div>
+<div class="rec-price">13€<small>/mes</small></div>
+</div>
+<div class="rec-item">
+<div><strong>Santalucía Mascotas</strong><small>Estándar</small></div>
+<div class="rec-price">11€<small>/mes</small></div>
+</div>
+</div>
+
+<p style="font-size: 13px; color: var(--color-muted); margin-bottom: 24px;">
+* Precios orientativos basados en perfiles tipo. Para una cotización exacta, contacta con cada aseguradora.
+</p>
+
+<div class="calc-actions" style="justify-content: center;">
+<button class="btn btn-ghost" data-action="restart">↻ Volver a calcular</button>
+<a href="/comparativas" class="btn btn-primary">Ver comparativa completa →</a>
+</div>
+</div>
+</div>
+</div>
+
+<div style="text-align: center; margin-top: 24px;">
+<span class="ad-label">Publicidad</span>
+<div class="ad-placeholder ad-rect" style="margin: 8px auto 0;">Espacio AdSense 728x250</div>
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="logo logo-footer">
+<span class="logo-mark">🐾</span>
+<span class="logo-text">Asegura<em>Tu</em>Mascota</span>
+</div>
+<p class="footer-desc">Comparador independiente de seguros para mascotas en España.</p>
+</div>
+<div>
+<h4>Mascotas</h4>
+<a href="/seguros-perros">Seguros perros</a>
+<a href="/seguros-gatos">Seguros gatos</a>
+<a href="/seguros-exoticos">Seguros exóticos</a>
+</div>
+<div>
+<h4>Aseguradoras</h4>
+<a href="/comparativas">Ver comparativa</a>
+</div>
+<div>
+<h4>Recursos</h4>
+<a href="/calculadora">Calculadora</a>
+<a href="/blog">Blog</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/legal/aviso-legal">Aviso legal</a>
+<a href="/legal/politica-privacidad">Privacidad</a>
+<a href="/legal/politica-cookies">Cookies</a>
+</div>
+</div>
+<div class="footer-bottom container">
+<p>© 2026 AseguraTuMascota.es</p>
+<p class="disclaimer">Contiene enlaces de afiliación.</p>
+</div>
+</footer>
+
+<div class="ad-sticky-mobile">
+<span class="ad-label-small">Publicidad</span>
+<div class="ad-placeholder-small">Anchor Ad 320x50</div>
+</div>
+
+<script src="/assets/js/script.js"></script>
+</body>
+</html>

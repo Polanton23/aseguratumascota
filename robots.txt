@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Permitir explícitamente a Google AdSense
+User-agent: Mediapartners-Google
+Allow: /
+
+# Permitir a Google y Bing
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://aseguratumascota.es/sitemap.xml
