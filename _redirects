@@ -21,4 +21,3 @@
 # /viejo-articulo   /nuevo-articulo    301
 
 # 404 fallback (siempre al final)
-/*                  /404.html                404
