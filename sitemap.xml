@@ -56,6 +56,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aseguratumascota.net/articulos/golden-retriever.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aseguratumascota.net/legal/aviso-legal.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
