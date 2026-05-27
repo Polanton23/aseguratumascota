@@ -13,4 +13,4 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap
-Sitemap: https://aseguratumascota.es/sitemap.xml
+Sitemap: https://aseguratumascota.net/sitemap.xml

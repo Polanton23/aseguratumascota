@@ -1,57 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aseguratumascota.es/</loc>
+    <loc>https://aseguratumascota.net/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/calculadora</loc>
+    <loc>https://aseguratumascota.net/calculadora</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/comparativas</loc>
+    <loc>https://aseguratumascota.net/comparativas</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/seguros-perros</loc>
+    <loc>https://aseguratumascota.net/seguros-perros</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/seguros-gatos</loc>
+    <loc>https://aseguratumascota.net/seguros-gatos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/seguros-exoticos</loc>
+    <loc>https://aseguratumascota.net/seguros-exoticos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/blog</loc>
+    <loc>https://aseguratumascota.net/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/articulos/bulldog-frances</loc>
+    <loc>https://aseguratumascota.net/sobre-nosotros</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aseguratumascota.net/contacto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aseguratumascota.net/articulos/bulldog-frances</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/legal/aviso-legal</loc>
+    <loc>https://aseguratumascota.net/legal/aviso-legal</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/legal/politica-privacidad</loc>
+    <loc>https://aseguratumascota.net/legal/politica-privacidad</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aseguratumascota.es/legal/politica-cookies</loc>
+    <loc>https://aseguratumascota.net/legal/politica-cookies</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
