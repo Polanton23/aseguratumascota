@@ -1,3 +1,19 @@
 # Cloudflare Pages — _redirects
-# Por ahora vacío. Las URLs usan extensión .html directamente.
-# Si en el futuro queremos URLs limpias, las añadiremos aquí.
+# Redirigir URLs sin .html que Google indexó → a las correctas con .html
+# Esto consolida el SEO en la URL canónica correcta
+
+/articulos/golden-retriever /articulos/golden-retriever.html 301
+/articulos/displasia-cadera /articulos/displasia-cadera.html 301
+/articulos/ley-bienestar-animal /articulos/ley-bienestar-animal.html 301
+/articulos/gato-persa /articulos/gato-persa.html 301
+/articulos/seguro-aves /articulos/seguro-aves.html 301
+/seguros-gatos /seguros-gatos.html 301
+
+# Por si acaso (URLs principales sin .html)
+/calculadora /calculadora.html 301
+/comparativas /comparativas.html 301
+/blog /blog.html 301
+/seguros-perros /seguros-perros.html 301
+/seguros-exoticos /seguros-exoticos.html 301
+/sobre-nosotros /sobre-nosotros.html 301
+/contacto /contacto.html 301
