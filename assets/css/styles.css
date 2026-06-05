@@ -1748,3 +1748,203 @@ p { color: var(--color-ink-soft); }
     padding: 0 18px 16px;
   }
 }
+
+/* ==========================================================================
+   PÁGINA DE PRODUCTOS — Cards Amazon Afiliados
+   ========================================================================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.product-card {
+  position: relative;
+  border: 1px solid var(--color-line, #e8e8e8);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s var(--ease, ease);
+}
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+  border-color: var(--color-primary, #1a3a2e);
+}
+.product-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--color-primary, #1a3a2e);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.product-img-wrap {
+  background: linear-gradient(135deg, #f5f5f5, #ececec);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  font-size: 56px;
+}
+.product-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-cat {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary, #1a3a2e);
+}
+.product-body h3 {
+  font-family: var(--font-display, 'Fraunces', serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-ink, #1a1a1a);
+  margin: 0;
+  line-height: 1.35;
+}
+.product-body p {
+  font-size: 14px;
+  color: var(--color-text, #555);
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+.product-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.ptag {
+  font-size: 11px;
+  background: #f0f7f4;
+  color: var(--color-primary, #1a3a2e);
+  padding: 3px 8px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+.product-footer {
+  padding: 0 20px 20px;
+}
+.btn-amazon {
+  width: 100%;
+  text-align: center;
+  background: #FF9900;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: block;
+}
+.btn-amazon:hover {
+  background: #e88800;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255,153,0,0.35);
+}
+
+/* BLOQUE PRODUCTOS EN ARTÍCULOS */
+.article-products {
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 28px;
+  margin: 40px 0;
+}
+.article-products-title {
+  font-family: var(--font-display, 'Fraunces', serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-ink, #1a1a1a);
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.article-products-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.article-products-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: border-color 0.2s;
+}
+.article-products-list li:hover {
+  border-color: var(--color-primary, #1a3a2e);
+}
+.apt-emoji {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.apt-info {
+  flex: 1;
+}
+.apt-info strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-ink, #1a1a1a);
+  margin-bottom: 2px;
+}
+.apt-info span {
+  font-size: 12px;
+  color: var(--color-muted, #888);
+}
+.apt-btn {
+  background: #FF9900;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.apt-btn:hover {
+  background: #e88800;
+}
+.apt-disclaimer {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .article-products-list li {
+    flex-wrap: wrap;
+  }
+  .apt-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
