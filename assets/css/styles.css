@@ -1958,3 +1958,19 @@ p { color: var(--color-ink-soft); }
   height: 220px;
   background-color: #fff;
 }
+
+/* ==========================================================================
+   ETIQUETAS DE CALIDAD — Comida para perros
+   ========================================================================== */
+.food-premium {
+  background: rgba(212, 175, 55, 0.95) !important;
+  color: #4a3800 !important;
+}
+.food-normal {
+  background: rgba(85, 150, 180, 0.95) !important;
+  color: #fff !important;
+}
+.food-eco {
+  background: rgba(100, 160, 100, 0.95) !important;
+  color: #fff !important;
+}
