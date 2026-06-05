@@ -1,7 +1,7 @@
-# Cloudflare Pages — _redirects
-# Redirigir URLs sin .html que Google indexó → a las correctas con .html
-# Esto consolida el SEO en la URL canónica correcta
+# Fix home: con html_handling "none" necesitamos esto
+/ /index.html 200
 
+# Redirigir URLs sin .html que Google ya indexó → a las correctas con .html
 /articulos/golden-retriever /articulos/golden-retriever.html 301
 /articulos/displasia-cadera /articulos/displasia-cadera.html 301
 /articulos/ley-bienestar-animal /articulos/ley-bienestar-animal.html 301
@@ -9,7 +9,7 @@
 /articulos/seguro-aves /articulos/seguro-aves.html 301
 /seguros-gatos /seguros-gatos.html 301
 
-# Por si acaso (URLs principales sin .html)
+# URLs principales sin .html
 /calculadora /calculadora.html 301
 /comparativas /comparativas.html 301
 /blog /blog.html 301
