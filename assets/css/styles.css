@@ -42,6 +42,10 @@
 
   /* Motion */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* Emil Kowalski easing curves — más punch que los defaults CSS */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);       /* Entradas UI: respuesta inmediata */
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);   /* Movimiento en pantalla */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* Micro-rebote en hover */
 }
 
 /* Reset */
@@ -365,7 +369,7 @@ p { color: var(--color-ink-soft); }
   border-radius: 100px;
   font-size: 14px;
   background: var(--color-bg);
-  transition: all 0.2s var(--ease);
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out), border-color 0.18s var(--ease-out);
   cursor: pointer;
 }
 .chip.active {
@@ -415,7 +419,7 @@ p { color: var(--color-ink-soft); }
   border-radius: 100px;
   font-weight: 600;
   font-size: 15px;
-  transition: all 0.25s var(--ease);
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out), background-color 0.18s var(--ease-out);
   cursor: pointer;
   white-space: nowrap;
 }
@@ -453,7 +457,7 @@ p { color: var(--color-ink-soft); }
   border-radius: 100px;
   color: var(--color-ink);
   font-weight: 600;
-  transition: all 0.2s var(--ease);
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out), border-color 0.18s var(--ease-out);
 }
 .btn-mini:hover {
   background: var(--color-primary);
@@ -633,7 +637,7 @@ p { color: var(--color-ink-soft); }
   border-radius: var(--radius-lg);
   padding: 36px 32px 32px;
   border: 1px solid var(--color-line);
-  transition: all 0.3s var(--ease);
+  transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
   position: relative;
   overflow: hidden;
 }
@@ -690,7 +694,7 @@ p { color: var(--color-ink-soft); }
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  transition: all 0.3s var(--ease);
+  transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
 }
 .pet-card:hover .pet-arrow {
   background: var(--color-primary);
@@ -717,7 +721,7 @@ p { color: var(--color-ink-soft); }
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--color-line);
-  transition: all 0.3s var(--ease);
+  transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
   display: flex;
   flex-direction: column;
 }
@@ -1109,7 +1113,7 @@ p { color: var(--color-ink-soft); }
   border-radius: var(--radius);
   cursor: pointer;
   text-align: center;
-  transition: all 0.2s var(--ease);
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out), border-color 0.18s var(--ease-out);
   background: #fff;
 }
 .calc-option:hover {
@@ -1290,7 +1294,7 @@ p { color: var(--color-ink-soft); }
   border-radius: var(--radius);
   margin-bottom: 10px;
   text-align: left;
-  transition: all 0.2s var(--ease);
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out), border-color 0.18s var(--ease-out);
 }
 .recommended-list .rec-item:hover {
   border-color: var(--color-primary);
@@ -1973,4 +1977,69 @@ p { color: var(--color-ink-soft); }
 .food-eco {
   background: rgba(100, 160, 100, 0.95) !important;
   color: #fff !important;
+}
+
+/* ===== MEJORA 2: Feedback táctil en botones ===== */
+/* Scale 0.97 al pulsar — el botón "cede" como en interfaces nativas */
+.btn:active {
+  transform: scale(0.97) !important;
+  transition: transform 0.1s var(--ease-out) !important;
+}
+.btn-primary:active {
+  background: var(--color-primary-dark);
+}
+.btn-secondary:active {
+  background: var(--color-bg-alt);
+}
+/* Cards también responden al clic */
+.article-card:active {
+  transform: scale(0.99) !important;
+  transition: transform 0.1s var(--ease-out) !important;
+}
+.pet-card:active {
+  transform: scale(0.99) translateY(0) !important;
+}
+/* Botones de la calculadora */
+.calc-option:active {
+  transform: scale(0.97) !important;
+}
+
+/* ===== MEJORA 3: Stagger en cards ===== */
+/* Las cards del blog/categorías aparecen en cascada al cargar */
+/* Más natural que todo aparecer de golpe */
+@keyframes card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.article-grid .article-card {
+  animation: card-appear 0.35s var(--ease-out) both;
+}
+
+/* Stagger: cada card 60ms después de la anterior */
+.article-grid .article-card:nth-child(1) { animation-delay: 0ms; }
+.article-grid .article-card:nth-child(2) { animation-delay: 60ms; }
+.article-grid .article-card:nth-child(3) { animation-delay: 120ms; }
+.article-grid .article-card:nth-child(4) { animation-delay: 180ms; }
+.article-grid .article-card:nth-child(5) { animation-delay: 240ms; }
+.article-grid .article-card:nth-child(6) { animation-delay: 300ms; }
+.article-grid .article-card:nth-child(7) { animation-delay: 360ms; }
+.article-grid .article-card:nth-child(8) { animation-delay: 420ms; }
+.article-grid .article-card:nth-child(9) { animation-delay: 480ms; }
+
+/* Reducir motion para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .article-grid .article-card {
+    animation: none;
+  }
+  .btn:active,
+  .article-card:active {
+    transform: none !important;
+  }
 }
